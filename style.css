@@ -1,0 +1,129 @@
+html{
+    font-family: sans-serif;
+}
+#toggleTheme{
+    position: absolute;
+    top: 0.5em;
+    left: 0.5em;
+}
+h1{
+    text-align: center;
+    font-size: 2rem;
+    padding:1rem;
+    margin:0;
+    border-bottom: 1px solid var(--textColor);
+}
+body{
+    color:var(--textColor);
+    background-color:var(--backgroundColor);
+    margin:0
+}
+main{
+    justify-content: space-evenly;
+}
+section{
+    display: flex;
+    flex-direction: column;
+}
+button{
+    background-color:var(--btnBacks);
+    color:var(--textColor)
+}
+.flex{
+    display: flex;
+}
+.row{
+    flex-direction: row;
+}
+.column{
+    flex-direction: column;
+}
+.spaceEven{
+    justify-content: space-evenly;
+}
+input{
+    padding: 0.5em;
+    border: 1px solid transparent;
+    border-radius: 100em;
+    background-color: var(--btnBacks);
+    text-align: center;
+    font-size: 1.25em;
+    color: var(--textColor);
+}
+#inputsContainer{
+    justify-content: space-evenly;
+    height: 80%;
+    overflow-y: auto;
+}
+
+#inputsContainer button{
+    font-size: 1.25em;
+    width: fit-content;
+    height: fit-content;
+    align-self: flex-end;
+}
+p.center{
+    text-align: center;
+}
+select{
+    width:fit-content;
+    background-color:var(--btnBacks);
+    color:var(--textColor)
+}
+#controlPanel{
+    width: 32vw;
+    padding: 0 1vw;
+    height: calc(100vh - 4.4rem);
+    border-right: 1px solid var(--textColor);
+}
+#generateReccomendationBtnContainer{
+    height: 20%;
+    padding: 1em;
+}
+#generateReccomendation{
+    height: 100%;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+#errorMessageContainer{
+    display:none;
+    color:red;
+    font-weight:bold;
+    font-style:italic;
+}
+
+#reccomendationDisplay{
+    width: 100%;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+.reccomendationContainer{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    margin:0.5em
+}
+.reccomendationContainer img{
+    width: 15vw;
+    height: 15vw;
+}
+.reccomendationContainer p{
+    text-align: center;
+    margin: 0;
+}
+
+.rockingAnimation{
+    transform:rotate(-10deg);
+    animation: rockingAnimation 0.25s infinite linear alternate
+}
+@keyframes rockingAnimation{
+    to{
+        transform:rotate(10deg)
+    }
+}
+:root{
+    --backgroundColor:white;
+    --textColor:black;
+    --btnBacks:rgb(200,200,200);
+}
